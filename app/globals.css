@@ -1,0 +1,170 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Raleway:wght@300;400;500;600;700&family=Nunito:wght@300;400;500;600&display=swap');
+
+:root {
+  --navy: #0f1f5c;
+  --teal: #0ea5a0;
+  --gold: #d4a843;
+  --ivory: #fdfbf7;
+  --ink: #1a1f3a;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Nunito', system-ui, sans-serif;
+  background: var(--ivory);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Scroll progress */
+#scroll-bar {
+  position: fixed; top: 0; left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #0ea5a0, #d4a843, #0ea5a0);
+  background-size: 200% 100%;
+  animation: shimmer 2.5s linear infinite;
+  z-index: 1000;
+  transition: width 0.08s linear;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: #f0f2f8; }
+::-webkit-scrollbar-thumb { background: #0ea5a0; border-radius: 3px; }
+
+::selection { background: rgba(14,165,160,0.2); }
+
+@layer components {
+  .font-display { font-family: 'Cinzel', Georgia, serif; }
+  .font-heading { font-family: 'Raleway', system-ui, sans-serif; }
+
+  .wrap { @apply max-w-7xl mx-auto; }
+  .section-pad { @apply py-20 md:py-28 px-4 md:px-8 lg:px-16; }
+
+  /* Glass card on dark bg */
+  .glass-card {
+    background: rgba(255,255,255,0.06);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 16px;
+  }
+
+  /* White card on light bg */
+  .white-card {
+    background: #ffffff;
+    border: 1px solid rgba(14,165,160,0.15);
+    border-radius: 16px;
+    box-shadow: 0 4px 32px rgba(7,14,45,0.08);
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-8 py-4 font-heading font-semibold text-sm tracking-wide text-white transition-all duration-300;
+    background: linear-gradient(135deg, #0ea5a0, #0c6b68);
+    border-radius: 50px;
+  }
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(14,165,160,0.4);
+  }
+
+  .btn-gold {
+    @apply inline-flex items-center gap-2 px-8 py-4 font-heading font-semibold text-sm tracking-wide text-navy-900 transition-all duration-300;
+    background: linear-gradient(135deg, #d4a843, #fcd34d, #c09030);
+    border-radius: 50px;
+    color: #070e2d;
+  }
+  .btn-gold:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(212,168,67,0.4);
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center gap-2 px-8 py-4 font-heading font-semibold text-sm tracking-wide transition-all duration-300;
+    border: 1.5px solid rgba(14,165,160,0.5);
+    color: #0ea5a0;
+    border-radius: 50px;
+    background: transparent;
+  }
+  .btn-outline:hover {
+    background: rgba(14,165,160,0.08);
+    border-color: #0ea5a0;
+    transform: translateY(-2px);
+  }
+
+  .section-tag {
+    @apply inline-flex items-center gap-2 px-4 py-1.5 text-xs font-heading font-semibold tracking-widest uppercase rounded-full;
+    background: rgba(14,165,160,0.1);
+    border: 1px solid rgba(14,165,160,0.25);
+    color: #0ea5a0;
+  }
+
+  /* Star rating */
+  .star { color: #d4a843; }
+}
+
+/* Floating WhatsApp button */
+.whatsapp-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 50;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #25D366, #128C7E);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 24px rgba(37,211,102,0.4);
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+  text-decoration: none;
+}
+.whatsapp-float:hover { transform: scale(1.1); box-shadow: 0 12px 32px rgba(37,211,102,0.5); }
+
+/* Gradient text */
+.text-teal-gradient {
+  background: linear-gradient(135deg, #0ea5a0, #5de8d8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.text-gold-gradient {
+  background: linear-gradient(135deg, #d4a843, #fcd34d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Appointment calendar styles */
+.day-btn { @apply w-10 h-10 rounded-full flex items-center justify-center text-sm font-heading font-medium transition-all duration-200 cursor-pointer; }
+.day-btn:not(.disabled):hover { background: rgba(14,165,160,0.15); color: #0ea5a0; }
+.day-btn.selected { background: #0ea5a0 !important; color: white !important; }
+.day-btn.disabled { @apply opacity-30 cursor-not-allowed; }
+.day-btn.today { border: 1.5px solid #0ea5a0; color: #0ea5a0; }
+
+.time-slot { @apply px-4 py-2 rounded-full text-sm font-heading font-medium border transition-all duration-200 cursor-pointer; border-color: rgba(14,165,160,0.3); color: #374151; }
+.time-slot:hover { border-color: #0ea5a0; color: #0ea5a0; background: rgba(14,165,160,0.05); }
+.time-slot.selected { background: #0ea5a0; color: white; border-color: #0ea5a0; }
+
+.form-input {
+  @apply w-full px-4 py-3 font-body text-sm border rounded-xl outline-none transition-all duration-200;
+  border-color: rgba(14,165,160,0.2);
+  background: #fafcff;
+  color: #1a1f3a;
+}
+.form-input:focus { border-color: #0ea5a0; box-shadow: 0 0 0 3px rgba(14,165,160,0.1); }
+.form-input::placeholder { color: #9ca3af; }
+.form-label { @apply block font-heading text-xs font-semibold tracking-wide uppercase mb-1.5; color: #374151; }
+.form-error { @apply font-body text-xs mt-1.5; color: #ef4444; }
