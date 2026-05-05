@@ -15,7 +15,7 @@ export default function ServicesPageContent() {
             Our <span style={{ color:'#5de8d8' }}>Treatments</span>
           </h1>
           <p className="font-body text-white/60 text-lg max-w-xl mx-auto mb-8">
-            Science-backed, personalised dermatology and aesthetic services at 96 Studio, Lanji & Chennai.
+            Science-backed, personalised dermatology and aesthetic services at Skin Solution, Lanji & Chennai.
           </p>
           <Link href="/appointments" className="btn-gold"><Calendar className="w-4 h-4" /> Book a Consultation</Link>
         </motion.div>

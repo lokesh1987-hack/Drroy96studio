@@ -1,13 +1,13 @@
 // config/site.js
 export const siteConfig = {
   // ── Doctor Details ─────────────────────────────────────────────────────
-  name: 'Dr. Shishir Roy',
+  name: 'Dr. Roy',
   shortName: 'Dr. Roy',
   title: 'Dermatologist & Aesthetic Specialist',
-  studio: '96 Studio',
+  studio: 'Skin Solution',
   tagline: 'Advanced Aesthetic Dermatology',
-  description: 'Dr. Shishir Roy is a leading dermatologist and aesthetic specialist at 96 Studio, offering advanced skin and hair treatments in Lanji & Chennai.',
-  url: 'https://drroy96studio.com',
+  description: 'Dr. Roy is a leading dermatologist and aesthetic specialist at Skin Solution, offering advanced skin and hair treatments in Lanji & Chennai.',
+  url: 'https://drroy.in',
 
   // ── Contact ────────────────────────────────────────────────────────────
   phone: '+91 90039 14390',
@@ -20,7 +20,7 @@ export const siteConfig = {
     {
       city: 'Lanji',
       label: 'Lanji Clinic',
-      address: '96 Studio, Main Road, Lanji, Madhya Pradesh',
+      address: 'Skin Solution, Main Road, Lanji, Madhya Pradesh',
       mapUrl: 'https://maps.google.com/?q=Lanji+Madhya+Pradesh',
       phone: '+91 90039 14390',
       hours: 'Mon–Sat: 10:00 AM – 7:00 PM',
@@ -29,7 +29,7 @@ export const siteConfig = {
     {
       city: 'Chennai',
       label: 'Chennai Clinic',
-      address: '96 Studio, Chennai, Tamil Nadu',
+      address: 'Skin Solution, Chennai, Tamil Nadu',
       mapUrl: 'https://maps.google.com/?q=96+Studio+Chennai',
       phone: '+91 90039 14390',
       hours: 'Tue & Thu: 11:00 AM – 5:00 PM',
@@ -167,11 +167,11 @@ export const siteConfig = {
     { id: 1, type: 'treatment', emoji: '💉', caption: 'PRP Hair Therapy in Progress', likes: '248', category: 'Hair' },
     { id: 2, type: 'result', emoji: '✨', caption: 'Skin Brightening — Before & After', likes: '412', category: 'Skin' },
     { id: 3, type: 'tip', emoji: '☀️', caption: 'Why SPF 30+ is Non-Negotiable', likes: '389', category: 'Tips' },
-    { id: 4, type: 'clinic', emoji: '🏥', caption: '96 Studio — Our State-of-the-Art Facility', likes: '156', category: 'Clinic' },
+    { id: 4, type: 'clinic', emoji: '🏥', caption: 'Skin Solution — Our State-of-the-Art Facility', likes: '156', category: 'Clinic' },
     { id: 5, type: 'treatment', emoji: '🔬', caption: 'Advanced Acne Management Protocol', likes: '524', category: 'Skin' },
     { id: 6, type: 'tip', emoji: '💧', caption: 'Morning Skincare Routine Guide', likes: '678', category: 'Tips' },
     { id: 7, type: 'result', emoji: '🌟', caption: 'Hair Regrowth — 6 Month Journey', likes: '891', category: 'Hair' },
-    { id: 8, type: 'clinic', emoji: '👨‍⚕️', caption: 'Consultation at 96 Studio Lanji', likes: '203', category: 'Clinic' },
+    { id: 8, type: 'clinic', emoji: '👨‍⚕️', caption: 'Consultation at Skin Solution Lanji', likes: '203', category: 'Clinic' },
     { id: 9, type: 'tip', emoji: '🧴', caption: 'Choosing the Right Moisturizer', likes: '445', category: 'Tips' },
   ],
 

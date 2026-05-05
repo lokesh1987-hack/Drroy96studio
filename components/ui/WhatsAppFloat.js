@@ -4,7 +4,7 @@ import { MessageCircle } from 'lucide-react'
 import { siteConfig } from '@/config/site'
 
 export default function WhatsAppFloat() {
-  const href = `https://wa.me/${siteConfig.phone.replace(/\D/g,'')}?text=Hello Dr. Roy, I'd like to book an appointment at 96 Studio.`
+  const href = `https://wa.me/${siteConfig.phone.replace(/\D/g,'')}?text=Hello Dr. Roy, I'd like to book an appointment at Skin Solution.`
   return (
     <motion.a
       href={href} target="_blank" rel="noopener noreferrer"

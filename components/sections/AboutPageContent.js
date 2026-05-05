@@ -19,7 +19,7 @@ export default function AboutPageContent() {
               <div className="font-heading text-xl mb-2" style={{ color:'#5de8d8' }}>{siteConfig.title}</div>
               <div className="font-heading text-base mb-6" style={{ color:'#d4a843' }}>✦ {siteConfig.studio}</div>
               <p className="font-body font-light text-white/65 text-lg leading-relaxed mb-8">
-                Dr. Shishir Roy is a dedicated dermatologist and aesthetic specialist with over 8 years of experience in advanced skin and hair treatments. At 96 Studio, he combines clinical expertise with a compassionate, patient-first approach.
+                Dr. Roy is a dedicated dermatologist and aesthetic specialist with over 8 years of experience in advanced skin and hair treatments. At Skin Solution, he combines clinical expertise with a compassionate, patient-first approach.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link href="/appointments" className="btn-gold"><Calendar className="w-4 h-4" /> Book Appointment</Link>
@@ -72,7 +72,7 @@ export default function AboutPageContent() {
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
-              { emoji:'🔬', title:'Evidence-Based', desc:'Every treatment protocol at 96 Studio is grounded in current clinical research and medical evidence.' },
+              { emoji:'🔬', title:'Evidence-Based', desc:'Every treatment protocol at Skin Solution is grounded in current clinical research and medical evidence.' },
               { emoji:'🎯', title:'Personalised Care', desc:"No two patients are the same. Dr. Roy designs individualised plans for your unique skin type, concerns and goals." },
               { emoji:'❤️', title:'Patient-First', desc:'From consultation to follow-up, your comfort, safety and satisfaction guide every decision we make.' },
             ].map((p,i) => (

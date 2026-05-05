@@ -18,7 +18,7 @@ export async function POST(req) {
         from: `"${name}" <${process.env.SMTP_USER}>`,
         to: process.env.NOTIFY_EMAIL || process.env.SMTP_USER,
         replyTo: email,
-        subject: `📩 Contact Form — ${name} | 96 Studio`,
+        subject: `📩 Contact Form — ${name} | Skin Solution`,
         html: `<div style="font-family:sans-serif;max-width:500px;padding:24px;background:#0f1f5c;color:#fdfbf7;border-radius:12px">
           <h3 style="color:#5de8d8">New Contact Message</h3>
           <p><strong>Name:</strong> ${name}</p>

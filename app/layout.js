@@ -10,7 +10,7 @@ import { siteConfig } from '@/config/site'
 export const metadata = {
   title: { default: `${siteConfig.name} | ${siteConfig.studio} — Dermatologist`, template: `%s | ${siteConfig.name}` },
   description: siteConfig.description,
-  keywords: ['dermatologist', 'skin specialist', 'PRP hair treatment', 'acne treatment', 'skin brightening', '96 Studio', 'Lanji', 'Chennai', 'aesthetic dermatology'],
+  keywords: ['dermatologist', 'skin specialist', 'PRP hair treatment', 'acne treatment', 'skin brightening', 'Skin Solution', 'Lanji', 'Chennai', 'aesthetic dermatology'],
   openGraph: { type: 'website', url: siteConfig.url, title: `${siteConfig.name} — ${siteConfig.studio}`, description: siteConfig.description, siteName: siteConfig.studio },
   twitter: { card: 'summary_large_image', title: `${siteConfig.name} — Dermatologist`, description: siteConfig.description },
   robots: { index: true, follow: true },

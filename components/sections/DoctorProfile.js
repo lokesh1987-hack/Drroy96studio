@@ -59,7 +59,7 @@ export default function DoctorProfile() {
               Expertise You Can<br /><span className="text-gold-gradient">Trust</span>
             </h2>
             <p className="font-body font-light text-white/65 text-lg leading-relaxed mb-4">
-              Dr. Shishir Roy brings over 8 years of expertise in advanced aesthetic dermatology. Practicing at 96 Studio, he combines medical precision with a patient-first philosophy.
+              Dr. Roy brings over 8 years of expertise in advanced aesthetic dermatology. Practicing at Skin Solution, he combines medical precision with a patient-first philosophy.
             </p>
             <p className="font-body font-light text-white/55 leading-relaxed mb-8">
               From non-surgical PRP hair restoration to advanced acne management and skin brightening protocols, Dr. Roy crafts personalized treatment plans guided by evidence-based medicine and ongoing research.

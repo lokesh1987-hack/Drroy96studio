@@ -33,7 +33,7 @@ export default function GalleryPageContent() {
             Gallery & <span style={{ color:'#5de8d8' }}>Results</span>
           </h1>
           <p className="font-body text-white/60 text-lg max-w-lg mx-auto mb-6">
-            Treatment results, skincare education, and life at 96 Studio — shared by Dr. Roy on {siteConfig.instagramHandle}
+            Treatment results, skincare education, and life at Skin Solution — shared by Dr. Roy on {siteConfig.instagramHandle}
           </p>
           <a href={siteConfig.instagram} target="_blank" rel="noopener noreferrer"
             className="btn-primary inline-flex">
@@ -103,7 +103,7 @@ export default function GalleryPageContent() {
             <div>
               <div className="font-display text-xl font-semibold text-navy mb-1">Share Your Transformation</div>
               <p className="font-body text-sm text-ink/55">
-                Treated at 96 Studio? Tag us on Instagram {siteConfig.instagramHandle} and share your journey!
+                Treated at Skin Solution? Tag us on Instagram {siteConfig.instagramHandle} and share your journey!
               </p>
             </div>
             <div className="flex gap-3 shrink-0">

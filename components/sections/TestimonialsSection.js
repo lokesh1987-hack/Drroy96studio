@@ -19,7 +19,7 @@ export default function TestimonialsSection() {
             Real Results, <span className="text-gold-gradient">Real People</span>
           </h2>
           <p className="font-body text-white/55 max-w-md mx-auto">
-            Hear from patients who've experienced the 96 Studio difference.
+            Hear from patients who've experienced the Skin Solution difference.
           </p>
         </motion.div>
 

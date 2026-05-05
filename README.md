@@ -1,4 +1,4 @@
-# Dr. Shishir Roy — 96 Studio Website
+# Dr. Roy — Skin Solution Website
 
 A premium, production-ready dermatologist portfolio and appointment booking website built with **Next.js 14**, **Tailwind CSS**, and **Framer Motion**.
 
@@ -74,7 +74,7 @@ Open http://localhost:3000
 All clinic data lives in **`config/site.js`**:
 
 ```js
-siteConfig.name = 'Dr. Shishir Roy'
+siteConfig.name = 'Dr. Roy'
 siteConfig.phone = '+91 90039 14390'
 siteConfig.instagram = 'https://instagram.com/drroy96studio'
 siteConfig.locations = [ /* Lanji + Chennai */ ]
@@ -136,4 +136,4 @@ The `vercel.json` is pre-configured with `"regions": ["bom1"]` (Mumbai) for best
 
 ---
 
-© 2026 Dr. Shishir Roy · 96 Studio. All rights reserved.
+© 2026 Dr. Roy · Skin Solution. All rights reserved.

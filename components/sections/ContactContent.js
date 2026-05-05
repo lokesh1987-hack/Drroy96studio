@@ -32,7 +32,7 @@ export default function ContactContent() {
       <div className="section-pad text-center" style={{ background:'linear-gradient(135deg, #070e2d, #0f1f5c)' }}>
         <motion.div initial={{ opacity:0, y:24 }} animate={{ opacity:1, y:0 }}>
           <span className="font-heading text-xs tracking-widest uppercase mb-3 block" style={{ color:'#5de8d8' }}>— Get in Touch</span>
-          <h1 className="font-display text-5xl font-semibold text-white mb-3">Contact <span style={{ color:'#5de8d8' }}>96 Studio</span></h1>
+          <h1 className="font-display text-5xl font-semibold text-white mb-3">Contact <span style={{ color:'#5de8d8' }}>Skin Solution</span></h1>
           <p className="font-body text-white/60 max-w-md mx-auto">We're here to help. Reach us by phone, WhatsApp, or the form below.</p>
         </motion.div>
       </div>

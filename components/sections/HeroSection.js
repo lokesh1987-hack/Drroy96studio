@@ -96,7 +96,7 @@ export default function HeroSection() {
               <div className="text-center mb-5">
                 <div className="font-display text-white text-lg font-semibold mb-1">{siteConfig.shortName}</div>
                 <div className="font-heading text-xs font-medium mb-1" style={{ color: '#5de8d8' }}>Dermatologist & Aesthetic Specialist</div>
-                <div className="font-heading text-xs" style={{ color: '#d4a843' }}>96 Studio · Lanji & Chennai</div>
+                <div className="font-heading text-xs" style={{ color: '#d4a843' }}>Skin Solution · Lanji & Chennai</div>
               </div>
 
               <div className="grid grid-cols-3 gap-2 mb-5">
