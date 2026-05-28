@@ -44,7 +44,7 @@ export default function HeroSection() {
 
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }}
             className="font-body font-light text-lg text-white/70 leading-relaxed mb-8 max-w-lg">
-            Specializing in advanced PRP hair therapy, acne management, skin brightening, and personalized skincare — serving patients across <strong className="text-white/90 font-medium">Lanji</strong> and <strong className="text-white/90 font-medium">Chennai</strong>.
+            Dr Roy is India's leading medical cosmetologist and medical esthetician, and CEO of DR. Roy Skin Solution — serving patients across <strong className="text-white/90 font-medium">Lanji</strong>, <strong className="text-white/90 font-medium">Chennai</strong>, <strong className="text-white/90 font-medium">Gondia</strong> and <strong className="text-white/90 font-medium">Mumbai</strong>
           </motion.p>
 
           {/* Trust badges */}
@@ -95,7 +95,7 @@ export default function HeroSection() {
 
               <div className="text-center mb-5">
                 <div className="font-display text-white text-lg font-semibold mb-1">{siteConfig.shortName}</div>
-                <div className="font-heading text-xs font-medium mb-1" style={{ color: '#5de8d8' }}>Dermatologist & Aesthetic Specialist</div>
+                <div className="font-heading text-xs font-medium mb-1" style={{ color: '#5de8d8' }}>Dermatologist & Medical Aesthetic Practitioner</div>
                 <div className="font-heading text-xs" style={{ color: '#d4a843' }}>Skin Solution · Lanji & Chennai</div>
               </div>
 

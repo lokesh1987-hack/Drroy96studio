@@ -2,8 +2,8 @@
 // Future: Connect to Instagram Basic Display API to fetch real posts
 // For now returns static placeholder data from config
 
-import { NextResponse } from 'next/server'
-import { siteConfig } from '@/config/site'
+import { NextResponse } from "next/server";
+// import { siteConfig } from "@/config/site";
 
 export async function GET() {
   // To connect real Instagram feed:
@@ -22,9 +22,23 @@ export async function GET() {
   */
 
   // Fallback: return config data
-  return NextResponse.json({
-    posts: siteConfig.galleryPosts,
-    handle: siteConfig.instagramHandle,
-    profileUrl: siteConfig.instagram,
-  })
+  try {
+    if (process.env.MONGODB_URI) {
+      const { MongoClient } = await import("mongodb");
+      const client = new MongoClient(process.env.MONGODB_URI);
+      await client.connect();
+      const gallery = await client
+        .db("drroy")
+        .collection("gallery")
+        .find()
+        .toArray();
+      console.log(gallery);
+      await client.close();
+    }
+
+    return NextResponse.json({ success: true, ref });
+  } catch (err) {
+    console.error(err);
+    return NextResponse.json({ error: "Server error" }, { status: 500 });
+  }
 }

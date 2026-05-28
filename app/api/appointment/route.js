@@ -1,31 +1,34 @@
 // app/api/appointment/route.js
-import { NextResponse } from 'next/server'
-import nodemailer from 'nodemailer'
+import { NextResponse } from "next/server";
+import nodemailer from "nodemailer";
 
 function genRef() {
-  return 'DR96-' + Math.random().toString(36).substr(2, 8).toUpperCase()
+  return "DR96-" + Math.random().toString(36).substr(2, 8).toUpperCase();
 }
 
 export async function POST(req) {
   try {
-    const body = await req.json()
-    const { name, phone, email, service, location, notes, date, time } = body
+    const body = await req.json();
+    const { name, phone, email, service, location, notes, date, time } = body;
     // console.log('Received appointment:', body)
 
     if (!name || !phone || !email || !service || !location) {
-      return NextResponse.json({ error: 'Missing required fields' }, { status: 400 })
+      return NextResponse.json(
+        { error: "Missing required fields" },
+        { status: 400 },
+      );
     }
 
-    const ref = genRef()
+    const ref = genRef();
 
     // ── Send email notification if SMTP is configured ──────────────────
     if (process.env.SMTP_USER && process.env.SMTP_PASS) {
       const transporter = nodemailer.createTransport({
-        host: process.env.SMTP_HOST || 'smtp.gmail.com',
+        host: process.env.SMTP_HOST || "smtp.gmail.com",
         port: Number(process.env.SMTP_PORT) || 587,
         secure: false,
         auth: { user: process.env.SMTP_USER, pass: process.env.SMTP_PASS },
-      })
+      });
 
       // Notify Dr. Roy
       await transporter.sendMail({
@@ -50,11 +53,11 @@ export async function POST(req) {
                 <tr><td style="padding:6px 0;color:#5de8d8">Time</td><td style="padding:6px 0;font-weight:600">${time}</td></tr>
               </table>
             </div>
-            ${notes ? `<div style="background:rgba(14,165,160,0.15);border-left:3px solid #0ea5a0;padding:12px 16px;border-radius:0 8px 8px 0;margin-bottom:20px"><p style="margin:0;font-size:13px;color:#cce8e7;font-style:italic">${notes}</p></div>` : ''}
+            ${notes ? `<div style="background:rgba(14,165,160,0.15);border-left:3px solid #0ea5a0;padding:12px 16px;border-radius:0 8px 8px 0;margin-bottom:20px"><p style="margin:0;font-size:13px;color:#cce8e7;font-style:italic">${notes}</p></div>` : ""}
             <p style="color:#5de8d8;font-size:11px;font-family:monospace;text-align:center;margin-top:24px;letter-spacing:1px">Skin Solution — Dr. Roy</p>
           </div>
         `,
-      })
+      });
 
       // Confirm to patient
       await transporter.sendMail({
@@ -77,27 +80,29 @@ export async function POST(req) {
                 <tr><td style="color:#0ea5a0;padding:5px 0">Time</td><td style="font-weight:600;color:#0f1f5c">${time}</td></tr>
               </table>
             </div>
-            <p style="color:#6b7280;font-size:13px;">Our team will call you 24 hours before your appointment to confirm. For any queries:<br>📞 ${process.env.CLINIC_PHONE || '+91 90039 14390'}</p>
+            <p style="color:#6b7280;font-size:13px;">Our team will call you 24 hours before your appointment to confirm. For any queries:<br>📞 ${process.env.CLINIC_PHONE || "+91 90039 14390"}</p>
             <p style="color:#9ca3af;font-size:11px;margin-top:24px;text-align:center">Dr. Roy · Skin Solution · Lanji & Chennai</p>
           </div>
         `,
-      })
+      });
     }
 
     // Optional MongoDB storage — uncomment + add MONGODB_URI
-    /*
-    if (process.env.MONGODB_URI) {
-      const { MongoClient } = await import('mongodb')
-      const client = new MongoClient(process.env.MONGODB_URI)
-      await client.connect()
-      await client.db('drroy').collection('appointments').insertOne({ ...body, ref, status: 'pending', createdAt: new Date() })
-      await client.close()
-    }
-    */
 
-    return NextResponse.json({ success: true, ref })
+    if (process.env.MONGODB_URI) {
+      const { MongoClient } = await import("mongodb");
+      const client = new MongoClient(process.env.MONGODB_URI);
+      await client.connect();
+      await client
+        .db("drroy")
+        .collection("appointments")
+        .insertOne({ ...body, ref, status: "pending", createdAt: new Date() });
+      await client.close();
+    }
+
+    return NextResponse.json({ success: true, ref });
   } catch (err) {
-    console.error(err)
-    return NextResponse.json({ error: 'Server error' }, { status: 500 })
+    console.error(err);
+    return NextResponse.json({ error: "Server error" }, { status: 500 });
   }
 }
