@@ -410,7 +410,7 @@ export const siteConfig = {
     },
     {
       id: 4,
-      type: "clinic",
+      type: "hair",
       emoji: "🏥",
       caption: "Advanced Hair Care Facility",
       url: "/images/hair_loss_Management.png",

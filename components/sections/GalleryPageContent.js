@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Instagram, Heart, X, ExternalLink, Upload } from "lucide-react";
 import { siteConfig } from "@/config/site";
 
-const CATS = ["All", "Hair", "Skin", "Tips", "Clinic"];
+const CATS = ["All", "Hair", "Skin", "Tips"];
 
 export default function GalleryPageContent() {
   const [cat, setCat] = useState("All");
