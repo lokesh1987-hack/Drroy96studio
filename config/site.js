@@ -106,7 +106,7 @@ export const siteConfig = {
       category: "Skin Care",
       icon: "🌟",
       emoji: "💫",
-      image: "/images/skin_brightning5.jpeg",
+      image: "/images/skin_brightining5.jpeg",
       shortDesc:
         "Target hyperpigmentation, uneven tone and dullness with our science-backed brightening protocols.",
       fullDesc:
