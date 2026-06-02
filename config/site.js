@@ -21,8 +21,9 @@ export const siteConfig = {
     {
       city: "Lanji",
       label: "Lanji Clinic",
-      address: "Skin Solution, Main Road, Lanji, Madhya Pradesh",
-      mapUrl: "https://maps.google.com/?q=Lanji+Madhya+Pradesh",
+      address:
+        "Skin Solution, ward no. 15, Bhilai Rd, Neemtola, Lanji, Madhya Pradesh 481222",
+      mapUrl: "https://maps.app.goo.gl/QyALK5TpNmQQHiGZ9",
       phone: "+91 90039 14390",
       hours: "Mon–Sat: 10:00 AM – 7:00 PM",
       isPrimary: true,
@@ -31,7 +32,7 @@ export const siteConfig = {
       city: "Chennai",
       label: "Chennai Clinic",
       address: "Skin Solution, Chennai, Tamil Nadu",
-      mapUrl: "https://maps.google.com/?q=96+Studio+Chennai",
+      // mapUrl: "https://maps.google.com/?q=96+Studio+Chennai",
       phone: "+91 90039 14390",
       hours: "Tue & Thu: 11:00 AM – 5:00 PM",
       isPrimary: false,
